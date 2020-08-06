@@ -28,11 +28,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           IconButton(icon: Icon(Icons.more_vert), onPressed: (){}, color: Colors.white,)
         ],
         bottom: TabBar( controller: _tabController,
+        labelColor: Colors.white,
+        unselectedLabelColor: Color(0xff128C7E),
+        indicatorColor: Colors.white,
           tabs: <Widget>[
-            Tab(icon: Icon(Icons.camera_alt, color: Colors.white,),),
-           Tab(child: Text('CHATS', style: Theme.of(context).textTheme.button,),),
-           Tab(child: Text('STATUS', style: Theme.of(context).textTheme.button,),),
-            Tab(child: Text('CALL', style: Theme.of(context).textTheme.button,),),
+            Tab(icon: Icon(Icons.camera_alt,),),
+           Tab(child: Text('CHATS', style: TextStyle(fontWeight: FontWeight.bold),),),
+           Tab(child: Text('STATUS', style: TextStyle(fontWeight: FontWeight.bold) ),),
+            Tab(child: Text('CALL', style: TextStyle(fontWeight: FontWeight.bold)),),
           ]),
       ),
       body: TabBarView(children: <Widget>[

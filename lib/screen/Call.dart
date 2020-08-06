@@ -21,11 +21,17 @@ class _CallState extends State<Call> {
               backgroundImage:NetworkImage(callData[i].imageUrl),
               ),
               title: Text(callData[i].name,
-              style: TextStyle(fontWeight: FontWeight.bold)),
+              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
               subtitle: Container(
                 padding: EdgeInsets.only(top: 5.0),
-                child: Text(callData[i].time,
-                style: TextStyle(color: Colors.grey, fontSize: 14.0)),
+                child: Row(
+                  children:  <Widget>[
+                    Icon(Icons.arrow_back),
+                    Padding(padding:  EdgeInsets.only(right: 8.0)),
+                    Text(callData[i].time,
+                style: TextStyle(color: Colors.grey, fontSize: 14.0))
+                ]
+                ),
                 ),
                 trailing: Icon(Icons.call),
                 selected: true,

@@ -23,7 +23,7 @@ class _ChatState extends State<Chat> {
                 Text(messageData[i].name,
                 style: TextStyle(fontWeight: FontWeight.bold)
                 ), 
-                Text(messageData[i].time, style: TextStyle(color: Colors.grey, fontSize: 16.0),
+                Text(messageData[i].time, style: TextStyle(color: Colors.grey, fontSize: 14.0),
             )
               ],
             ),
